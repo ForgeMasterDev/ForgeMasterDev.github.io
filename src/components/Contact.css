@@ -1,0 +1,157 @@
+.contact {
+  position: relative;
+  width: 100%;
+  padding: 150px 6vw 170px;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(95, 108, 65, 0.08),
+      transparent 32%
+    ),
+    linear-gradient(
+      180deg,
+      #070806 0%,
+      #080a06 55%,
+      #070707 100%
+    );
+
+  color: #eee9dc;
+}
+
+.contact__container {
+  width: min(100%, 1400px);
+  margin: 0 auto;
+}
+
+.contact__eyebrow {
+  display: block;
+  margin-bottom: 28px;
+
+  color: #8f8a7d;
+
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 0.68rem;
+  font-weight: 500;
+
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+}
+
+.contact__heading {
+  max-width: 950px;
+  margin: 0 0 80px;
+
+  color: #eee9dc;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(3rem, 7vw, 7rem);
+  font-weight: 500;
+
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+}
+
+.contact__links {
+  width: 100%;
+  border-top: 1px solid rgba(232, 224, 205, 0.12);
+}
+
+.contact__link {
+  width: 100%;
+  min-height: 115px;
+
+  display: grid;
+  grid-template-columns: 1fr 2fr auto;
+  align-items: center;
+  gap: 30px;
+
+  margin: 0;
+  padding: 25px 4px;
+
+  border: 0;
+  border-bottom: 1px solid rgba(232, 224, 205, 0.12);
+
+  background: transparent;
+  color: inherit;
+
+  font: inherit;
+  text-align: left;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    padding 250ms ease,
+    background-color 250ms ease;
+}
+
+.contact__link:hover {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.contact__link:focus-visible {
+  outline: 1px solid rgba(245, 235, 204, 0.7);
+  outline-offset: 5px;
+}
+
+.contact__platform {
+  color: #858074;
+
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.contact__username {
+  color: #e7e1d4;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.8rem, 4vw, 3.5rem);
+  font-weight: 500;
+}
+
+.contact__arrow {
+  color: #777267;
+
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 0.62rem;
+  font-weight: 500;
+
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 700px) {
+  .contact {
+    padding: 110px 18px 125px;
+  }
+
+  .contact__heading {
+    margin-bottom: 55px;
+  }
+
+  .contact__link {
+    min-height: 130px;
+
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+  }
+
+  .contact__username {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .contact__arrow {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}

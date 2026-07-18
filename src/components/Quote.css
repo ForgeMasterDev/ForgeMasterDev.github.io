@@ -1,0 +1,181 @@
+.quote {
+  position: relative;
+  isolation: isolate;
+
+  width: 100%;
+  min-height: 82vh;
+  min-height: 82svh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+  padding: 150px 6vw 40px;
+
+  background:
+    radial-gradient(
+      circle at 50% 35%,
+      rgba(92, 108, 60, 0.1),
+      transparent 38%
+    ),
+    linear-gradient(
+      180deg,
+      #070806 0%,
+      #080a06 48%,
+      #050505 100%
+    );
+
+  color: #eee9dc;
+}
+
+/* Arkadaki hafif yeşil parıltı */
+.quote__glow {
+  position: absolute;
+  z-index: -2;
+
+  top: 16%;
+  left: 50%;
+
+  width: min(850px, 75vw);
+  height: 320px;
+
+  border-radius: 50%;
+
+  background: rgba(126, 137, 81, 0.07);
+  filter: blur(100px);
+
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+/* Analog doku */
+.quote__grain {
+  position: absolute;
+  z-index: -1;
+
+  inset: -50%;
+  width: 200%;
+  height: 200%;
+
+  opacity: 0.025;
+  pointer-events: none;
+  mix-blend-mode: screen;
+
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.65'/%3E%3C/svg%3E");
+}
+
+/* Söz alanı */
+.quote__content {
+  position: relative;
+
+  width: min(100%, 1100px);
+  margin: auto;
+
+  text-align: center;
+}
+
+/* Büyük tırnak işareti */
+.quote__mark {
+  display: block;
+
+  height: 75px;
+  margin-bottom: 25px;
+
+  color: rgba(190, 188, 158, 0.15);
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 9rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+/* Ana söz */
+.quote__content p {
+  max-width: 1000px;
+  margin: 0 auto;
+
+  color: #e8e3d6;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2.7rem, 5.7vw, 6.2rem);
+  font-weight: 500;
+
+  line-height: 1;
+  letter-spacing: -0.035em;
+
+  text-wrap: balance;
+}
+
+/* Marcus Aurelius */
+.quote__content cite {
+  display: block;
+  margin-top: 45px;
+
+  color: #888276;
+
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 0.65rem;
+  font-style: normal;
+  font-weight: 500;
+
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.quote__content cite::before {
+  content: "— ";
+}
+
+/* En alttaki footer */
+.quote__bottom {
+  width: min(100%, 1400px);
+  margin-top: 130px;
+  padding-top: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+
+  border-top: 1px solid rgba(232, 224, 205, 0.1);
+
+  color: #666158;
+
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 0.58rem;
+  font-weight: 500;
+
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 700px) {
+  .quote {
+    min-height: 75vh;
+    padding: 110px 18px 32px;
+  }
+
+  .quote__mark {
+    height: 55px;
+    font-size: 7rem;
+  }
+
+  .quote__content p {
+    font-size: clamp(2.4rem, 11vw, 4.2rem);
+  }
+
+  .quote__content cite {
+    margin-top: 35px;
+  }
+
+  .quote__bottom {
+    margin-top: 100px;
+
+    flex-direction: column;
+    gap: 12px;
+
+    text-align: center;
+  }
+}
