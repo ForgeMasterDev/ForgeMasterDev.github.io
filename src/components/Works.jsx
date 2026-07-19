@@ -5,14 +5,14 @@ import "./works.css";
 const projects = [
   {
     id: 1,
-    title: "Simple Flying Idle",
+    title: "Basic Flying Idle",
     category: "3D Animation",
     year: "2026",
     file: "work-01.mp4",
   },
   {
     id: 2,
-    title: "Simple Walking",
+    title: "Basic Walking",
     category: "3D Animation",
     year: "2026",
     file: "work-02.mp4",
@@ -23,6 +23,20 @@ const projects = [
     category: "3D Animation",
     year: "2026",
     file: "work-03.mp4",
+  },
+    {
+    id: 4,
+    title: "Gun Walk",
+    category: "Animation",
+    year: "2026",
+    file: "work-04.mp4",
+  },
+  {
+    id: 5,
+    title: "Gun Run",
+    category: "Animation",
+    year: "2026",
+    file: "work-05.mp4",
   },
 ];
 
